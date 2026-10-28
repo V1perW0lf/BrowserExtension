@@ -326,6 +326,10 @@ html {
 	white-space: nowrap;
 }
 
+.steamdb_achievement_unlock_global.steamdb_achievement_unlock_global_rare {
+	color: #ffd539;
+}
+
 .steamdb_achievement_status ~ .steamdb_achievement_unlock_global {
 	margin-left: 0;
 }

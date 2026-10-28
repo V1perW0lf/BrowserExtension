@@ -424,6 +424,13 @@ async function InitAchievements( items, isPersonalHint )
 
 			const unlock = document.createElement( 'div' );
 			unlock.className = 'steamdb_achievement_unlock_global';
+
+			// Rare achievements (under 10% of players) get a gold percentage
+			if( ach.globalUnlock < 0.1 )
+			{
+				unlock.classList.add( 'steamdb_achievement_unlock_global_rare' );
+			}
+
 			unlock.title = _t( 'achievement_global_unlock', [ percent ] );
 			unlock.textContent = percent;
 			element.append( unlock );
